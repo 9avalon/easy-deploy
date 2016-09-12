@@ -14,7 +14,7 @@ if [ ! -n "$tomcat_id" ]; then
     echo "===== not found tomcat's pid, tomcat already close complete ====="
 else 
     # run shut down 
-    shutdown.sh
+    ./shutdown.sh
     echo "===== closing the tomcat, waiting ... ====="
     sleep 3
     
@@ -31,7 +31,7 @@ rm -rf ../webapps/$war_name
 rm -rf ../work/Catalina/*
 rm -rf ../temp/*
 # restart tomcat
-startup.sh
+./startup.sh
 
 # tail the log
 tail -f ../logs/catalina.out
