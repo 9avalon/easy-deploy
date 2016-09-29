@@ -34,4 +34,6 @@ rm -rf ../temp/*
 ./startup.sh
 
 # tail the log
-tail -f ../logs/catalina.out
+cur_date=$(date +%F)
+tail -f ../logs/catalina.out.${cur_date}
+
