@@ -13,7 +13,7 @@ war_name="xxxxx"
 isDeleteUnzipWar=true
 
 # INIT ARGS, DEAL THE -s ARGS
-while getopts d opt
+while getopts s opt
 do 
     case "$opt" in
     s)
@@ -59,4 +59,4 @@ rm -rf ../temp/*
 
 # tail the log
 cur_date=$(date +%F)
-tail -f ../logs/catalina.out.${cur_date}
+tail -f ../logs/catalina.out.${cur_date}.log
