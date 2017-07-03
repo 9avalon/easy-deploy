@@ -59,4 +59,5 @@ rm -rf ../temp/*
 
 # tail the log
 cur_date=$(date +%F)
+# tail -f ../logs/catalina.out
 tail -f ../logs/catalina.out.${cur_date}
